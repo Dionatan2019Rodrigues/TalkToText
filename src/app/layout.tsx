@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { cookies } from "next/headers";
 import React, { Suspense } from "react";
-import { Refine, GitHubBanner } from "@refinedev/core";
+import { Refine } from "@refinedev/core";
 import { DevtoolsProvider } from "@providers/devtools";
 import { RefineKbar, RefineKbarProvider } from "@refinedev/kbar";
 import {
