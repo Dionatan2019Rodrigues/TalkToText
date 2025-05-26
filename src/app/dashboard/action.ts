@@ -25,3 +25,14 @@ export async function deleteNote(id: number) {
 
   if (!error) revalidatePath("/");
 }
+
+export async function updateNote(id: number, updatedTask: string) {
+  const supabase = await createClient();
+
+  const { error } = await supabase
+    .from("todos")
+    .update({ task: updatedTask })
+    .eq("id", id);
+
+  if (!error) revalidatePath("/dashboard");
+}

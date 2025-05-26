@@ -1,10 +1,12 @@
 import { createClient } from "@/utils/supabase/server";
 import { createNote } from "./action";
+import UpdateButton from "@/components/UpdateButton";
 import DeleteButton from "@/components/DeleteButton";
 
 const DashboardPage = async () => {
   const supabase = await createClient();
   const { data: todos } = await supabase.from("todos").select("*");
+  
   return (
     <div className="p-10">
       <div className="flex flex-col gap-5">
@@ -29,7 +31,10 @@ const DashboardPage = async () => {
               className="w-full flex justify-between items-center border rounded p-2"
             >
               <h2>{todo.task}</h2>
-              <DeleteButton id={todo.id} />
+              <div className="flex gap-2">
+                <UpdateButton id={todo.id} initialTask={todo.task} />
+                <DeleteButton id={todo.id} />
+              </div>
             </div>
           ))}
         </div>
@@ -37,5 +42,5 @@ const DashboardPage = async () => {
     </div>
   );
 };
-
+ 
 export default DashboardPage;
