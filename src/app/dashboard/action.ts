@@ -17,3 +17,11 @@ export async function createNote(formdata: FormData) {
 
   if (!error) revalidatePath("/");
 }
+
+export async function deleteNote(id: number) {
+  const supabase = await createClient();
+
+  const { error } = await supabase.from("todos").delete().eq("id", id);
+
+  if (!error) revalidatePath("/");
+}
