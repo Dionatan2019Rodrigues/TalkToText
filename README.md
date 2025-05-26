@@ -5,7 +5,7 @@
 <img src="public/project-view.png"/>
 
 #### Acesso
-[talktotext.com](https://dionatan2019rodrigues.github.io/monte-seu-treino/)
+[talk-to-text-dionatan.vercel.app](https://talk-to-text-dionatan.vercel.app/login)
 
 #### Desenvolvedor
 Dionatan Eduardo Correa Rodrigues - Ciência da Computação
