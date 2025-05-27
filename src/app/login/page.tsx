@@ -7,7 +7,7 @@ export default function LoginPage() {
           <form action={login} className="flex flex-col gap-3">
             <h1 className="text-gray-950">Acesse sua conta!</h1>
             <input name="email" type="email" placeholder='Email' required className="bg-gray-50 rounded text-gray-950 p-2 w-full border" defaultValue="dionatan@supabase.next"/>
-            <input name="password" type="password" placeholder='Senha' required className="bg-gray-50 rounded text-gray-950 p-2 w-full border"/>
+            <input name="password" type="password" placeholder='Senha' required className="bg-gray-50 rounded text-gray-950 p-2 w-full border" defaultValue="secret"/>
             <button type="submit" className="bg-indigo-600 p-2 rounded cursor-pointer">Entrar</button>
           </form>
         </div>
